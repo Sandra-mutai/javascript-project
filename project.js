@@ -25,8 +25,6 @@ class Mkulima{
         this.product=[];
         this.order=[];
         this.vendor=[];
-        this.name="Jeannine"
-        this.age=21
 
 
     }
@@ -107,9 +105,9 @@ printProducts(products,prices){
 
    }
 
-   calculateOrderCost(price, quantity){
+   calculateOrderCost(productId, quantity){
     let  orderCost=this.farm.find(orderCost=>orderCost.productId==productId)
-      console.log(`${price*quantity}`);
+      console.log(`${productId*quantity}`);
      return orderCost
       }
     }
@@ -119,15 +117,15 @@ printProducts(products,prices){
 
 
 let  farm=new Mkulima();
-console.log(farm.addFarm(756,"Mulima","Karima",778989737,"Karen"));
-console.log(farm.addFarm(116,"Kulima","rima",778990837,"Nyeri"));
+console.log(farm.addFarm(756,"Gashora Firm","Karisa",+2578989737,"Gashora"));
+console.log(farm.addFarm(116,"Kirehe Farm","Kamari",+25078990837,"Kirehe"));
 console.log(farm.removeFarm(756));
-console.log(farm.updateFarm(23453,"Mulima","Gad","+3453436336","Kitale"));
+console.log(farm.updateFarm(345,"Knamba farm","Gad",+3453436336,"Kinamba"));
 console.log(farm.getFarm(116));
-console.log(farm.addProduct(756,"Akandi",67000));
-console.log(farm.updateProduct("3452DT","Corn",6800));
+console.log(farm.addProduct(756,"Akabanga",67000));
+console.log(farm.updateProduct("3452DT","Maize",6800));
 console.log(farm.getFarm(116));
-console.log(farm.printProducts("Orange",600,"Mango",500,"Banana",700));
+console.log(farm.printProducts("Orange",600,"apple",500,"Banana",700));
 console.log(farm.calculateOrderCost(756,34))
 
 
